@@ -1,0 +1,151 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #a4c910, #ff6600);
+}
+
+.wrapper {
+    width: 800px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.wrapper .content-box {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    background: #f9f9f9;
+}
+
+.wrapper .input-field {
+    padding: 13px 20px 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -99;
+}
+
+.content-box .typing-text {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.content-box .content {
+    margin-top: 20px;
+    display: flex;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #e0e0e0;
+}
+
+.content-box .result-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 140px);
+}
+
+.result-details li {
+    display: flex;
+    height: 25px;
+    list-style: none;
+    align-items: center;
+    font-size: 18px;
+    color: #555;
+}
+
+.result-details li span {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.content button {
+    width: 120px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background: #ff7700;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.content button:hover {
+    background: #ff9900;
+    box-shadow: 0 5px 15px rgba(255, 119, 0, 0.3);
+}
+
+.content button:active {
+    transform: scale(0.95);
+}
+
+.typing-text p span {
+    position: relative;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.typing-text p span.active {
+    color: #ff7700;
+    text-decoration: underline;
+}
+
+.typing-text p span.correct {
+    color: #4caf50;
+}
+
+.typing-text p span.incorrect {
+    color: #f44336;
+    background: #ffebee;
+    border-radius: 4px;
+    outline: none;
+}
+
+::selection {
+    color: #fff;
+    background: #ff7700;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff9900;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff7700;
+}
